@@ -1,0 +1,46 @@
+.card_content{
+    /* height: 550px; */
+    background-color: rgba(183, 183, 183, 0.059);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px rgba(255, 255, 255, 0.068) solid;
+}
+
+.card_content:hover{
+    transform: scale(1.01);
+    transition-duration: 160ms;
+    cursor: pointer;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.399); */
+    
+
+}
+
+
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    /* background: #668590; */
+    height: 1px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+  }
