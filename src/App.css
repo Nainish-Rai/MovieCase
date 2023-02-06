@@ -1,0 +1,14 @@
+.backdrop_image img{
+    filter: brightness(0.4);
+    width: 100%;
+}
+.trailer_btn{
+    background-color: rgba(240, 248, 255, 0.86);
+}
+
+.trailer_btn:hover{
+    background-color: rgba(240, 248, 255, 0.192);
+    /* border: rgba(240, 248, 255, 0.86) 1px solid; */
+    color: rgba(240, 248, 255, 0.86);
+    transition: 250ms;
+}
