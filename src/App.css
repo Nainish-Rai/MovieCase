@@ -12,3 +12,19 @@
     color: rgba(240, 248, 255, 0.86);
     transition: 250ms;
 }
+
+.form input{
+    text-decoration: none;
+    inset: none;
+}
+.form input:focus{
+    border: 1px solid rgb(148, 148, 148);
+    outline: none;
+}
+.App{
+    background-color: #08090e;
+}
+.searchbtn{
+    color: rgb(43, 43, 43);
+    background-color: rgba(248, 248, 254, 0.863);
+}

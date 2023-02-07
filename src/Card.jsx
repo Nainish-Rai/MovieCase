@@ -9,15 +9,15 @@ export default function Card({Title,Year,Thumb,Rank,Description,Imdbid,HandleCli
     return(
 
         <div onClick={HandleClick} id={Imdbid} className="flex flex-col w-full sm:w-1/2 md:w-1/3 lg:w-1/4  rounded-md h-auto">
-           <div className="hvr-underline-from-center card_content m-5 rounded-md overflow-hidden shadow-lg"> 
+           <div className="hvr-underline-from-center card_content m-4 rounded-md overflow-hidden shadow-2xl"> 
             <img className="w-full" src={Thumb} />
-            <div className="p-2">
-             <h3>Rank: {Rank}</h3>
+            <div className="p-2 font-semibold text-slate-300 text-md">
+             {Rank && <h3>Rank: {Rank}</h3>}
             <h1 className="font-bold text-xl
-             border-b-2 pb-3 border-slate-700 ">{Title} <span className="font-semibold text-lg
+             border-b-2 pt-1 text-slate-300 pb-3 border-gray-600 ">{Title} <span className="font-semibold text-lg
             ">( {Year} )</span> </h1>
          
-            <p className=" overflow-hidden mt-4 font-thin text-slate-300 text-sm mb-3">{Description}</p></div>
+            <p className=" overflow-hidden mt-4 font-semibold p-1 text-slate-400 text-sm mb-3">{Description}</p></div>
         </div></div>
     )
 }

@@ -1,7 +1,8 @@
 .card_content{
+  background-color: rgba(17, 17, 20, 0.504);
     /* height: 550px; */
-    background-color: rgba(183, 183, 183, 0.059);
-    backdrop-filter: blur(10px);
+    /* background-color: rgba(183, 183, 183, 0.059); */
+    /* backdrop-filter: blur(10px); */
     border-bottom: 1px rgba(255, 255, 255, 0.068) solid;
 }
 
@@ -31,7 +32,7 @@
     left: 51%;
     right: 51%;
     bottom: 0;
-    /* background: #668590; */
+    background: #668590;
     height: 1px;
     -webkit-transition-property: left, right;
     transition-property: left, right;

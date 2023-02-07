@@ -12,7 +12,7 @@ function App() {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'Your Key',
+        'X-RapidAPI-Key': 'f9cfa79e0fmsh8dd788ab27668c8p13655ajsnc142bee1819e',
         'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
       }
     };
@@ -47,7 +47,7 @@ function App() {
           const options = {
               method: 'GET',
               headers: {
-                  'X-RapidAPI-Key': 'YOUR KEY',
+                  'X-RapidAPI-Key': 'f9cfa79e0fmsh8dd788ab27668c8p13655ajsnc142bee1819e',
                   'X-RapidAPI-Host': 'mdblist.p.rapidapi.com'
               }
           };
@@ -60,18 +60,51 @@ function App() {
       
 
   }
+  const[searchMovies,setSearchMovies]=useState([])
+    let searchTerm = ""
 
-  const Styles ={
+    let searchlist = searchMovies.map(movie=>{
+      return(
+        movie.qid=="movie"&&
+        <Card
+        Title={movie.l}
+        Year={movie.y}
+        Thumb={movie.i.imageUrl}
+        Rank=""
+        Description={movie.s}
+        Imdbid={movie.id}
+        key={movie.id}
+        HandleClick={()=>getMovie(movie.id)}
+        />
+      )
+    })
+  function handleChange(event){
+      searchTerm = event.target.value
+  }
+
+  function searchMovie(name){
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'f9cfa79e0fmsh8dd788ab27668c8p13655ajsnc142bee1819e',
+        'X-RapidAPI-Host': 'imdb-movies-web-series-etc-search.p.rapidapi.com'
+      }
+    };
     
-}
+    fetch(`https://imdb-movies-web-series-etc-search.p.rapidapi.com/${name}.json`, options)
+      .then(response => response.json())
+      .then(response => setSearchMovies(response.d))
+      .catch(err => console.error(err));
+      searchTerm=""
+  }
 
   return (
     // <BrowserRouter>
     // <Routes>
-    <div className="App bg-black text-blue-50 
+    <div className="App  text-blue-50 
      ">
-
-      {movie?<div className='mx-auto w-full pt-10 p-5 max-w-8xl ' >
+      {/* movie detailed showcase */}
+      {movie?<div className='mx-auto w-full pt-10 p-5 max-w-8xl mb-10' >
         <div className=' backdrop_image relative rounded-md overflow-hidden'>
           {screen.width>650?<img src={movie.backdrop} className="
         w-full"/>:<img src={movie.poster}/>}
@@ -110,11 +143,36 @@ function App() {
       </div>:""}
 
 
+        {/* Headings Section */}
+
+      <h1 className='text-3xl lg:text-5xl text-gray-200  font-bold w-full mx-auto text-center pt-10 '>MOVIE-CASE</h1>
+      <p className='font-semibold w-full mx-auto text-center pt-8 pb-10 opacity-60'>A List Of Cinematic Masterpieces Ever Created</p>
+
+
+
+      {/* Search Section */}
+                <div className='form w-full max-w-5xl flex justify-center mx-auto pt-2 items-center mb-5'>
+                 <input 
+                    type="text"
+                    placeholder="Search Movie"
+                    className="forminput bg-transparent border-zinc-800 focus:border-none px-5 rounded-md py-2 border-2 mr-4"
+                    onChange={handleChange}
+                />
+                <div className='searchbtn border-2 p-2 rounded font-semibold border-zinc-800
+                text-sm cursor-pointer' onClick={()=>searchMovie(searchTerm)}>Search</div>
+                </div>
+
+                
+    
+
+      {/* Search Movie List */}
+      {searchMovies && <div className='flex flex-wrap mx-auto p-2 w-full  justify-center max-w-6xl'>  {searchlist}</div>}
+
+
       {/*MOVIES LIST BELOW  */}
       
 
-      <h1 className='text-3xl lg:text-5xl  font-bold w-full mx-auto text-center pt-10 '>MOVIE-CASE</h1>
-      <p className='font-semibold w-full mx-auto text-center pt-8 pb-10 opacity-60'>A List Of Cinematic Masterpieces Ever Created</p>
+    
       <div className='flex flex-wrap mx-auto p-2 w-full max-w-6xl'>  {movieList}</div>
       {/* <Route path="moviepage" element={<moviepage/>}/> */}
     </div>
