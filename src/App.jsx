@@ -12,7 +12,7 @@ function App() {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'f9cfa79e0fmsh8dd788ab27668c8p13655ajsnc142bee1819e',
+        'X-RapidAPI-Key': 'Your Key',
         'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
       }
     };
@@ -47,7 +47,7 @@ function App() {
           const options = {
               method: 'GET',
               headers: {
-                  'X-RapidAPI-Key': 'f9cfa79e0fmsh8dd788ab27668c8p13655ajsnc142bee1819e',
+                  'X-RapidAPI-Key': 'YOUR KEY',
                   'X-RapidAPI-Host': 'mdblist.p.rapidapi.com'
               }
           };
