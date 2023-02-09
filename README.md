@@ -1,20 +1,20 @@
-#Movie Showcase
+# Movie Showcase
 A single-page movie showcase application built with React and Tailwind CSS. Browse your favorite movies and get more information about them in an elegant and user-friendly way.
 
 [Live Preview](https://nainishmoviecase.netlify.app/)
 
-##Features
+## Features
 Search and filter your favorite movie
 View movie details including cast, overview, and related movies
 A List of top 100 movies ever made
 Responsive design for optimal viewing on different devices
 
-##Technologies
+## Technologies
 React
 Tailwind CSS
 The Movie Database (TMDB) API
 
-##Quick start
+## Quick start
 Clone the repository
 bash
 Copy code
@@ -33,8 +33,8 @@ Copy code
 npm start
 Visit http://localhost:3000 in your browser to view the app.
 
-##Contributing
+## Contributing
 We welcome contributions to this project. If you have an idea for a new feature or found a bug, please open an issue. If you would like to contribute code, please submit a pull request.
 
-##License
+## License
 Movie Showcase is open-sourced software licensed under the MIT license.
