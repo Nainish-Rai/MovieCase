@@ -4,9 +4,13 @@ A single-page movie showcase application built with React and Tailwind CSS. Brow
 [Live Preview](https://nainishmoviecase.netlify.app/)
 
 ## Features
+
 Search and filter your favorite movie
+
 View movie details including cast, overview, and related movies
+
 A List of top 100 movies ever made
+
 Responsive design for optimal viewing on different devices
 
 ## Screenshots
